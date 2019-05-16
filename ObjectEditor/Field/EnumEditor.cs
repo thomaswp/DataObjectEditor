@@ -1,10 +1,10 @@
-﻿using Emigre.Editor.Reflect;
+﻿using ObjectEditor.Editor.Reflect;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Emigre.Editor.Field
+namespace ObjectEditor.Editor.Field
 {
     public class EnumEditor : FieldEditor<Enum>
     {

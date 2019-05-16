@@ -1,4 +1,4 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 
 namespace Emigre.Data
 {
@@ -16,7 +16,7 @@ namespace Emigre.Data
             this.disableWhenDone = true;
         }
 
-        public override void AddFields(Json.FieldData fields)
+        public override void AddFields(FieldData fields)
         {
             base.AddFields(fields);
             timing = fields.add(timing, "timing");

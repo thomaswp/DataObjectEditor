@@ -1,5 +1,5 @@
 ﻿
-namespace Emigre.Json
+namespace ObjectEditor.Json
 {
     public interface IIgnorable
     {

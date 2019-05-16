@@ -1,6 +1,6 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 
-namespace Emigre.Editor
+namespace ObjectEditor.Editor
 {
     public class EditorIndex : DataObject
     {

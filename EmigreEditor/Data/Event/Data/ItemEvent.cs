@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
 
-    using Json;
+    using ObjectEditor.Json;
 
     [Category("Data")]
     public class ItemEvent : StoryEvent, IReadOnlyScriptable

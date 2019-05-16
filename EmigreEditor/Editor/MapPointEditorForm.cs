@@ -41,7 +41,7 @@ namespace Emigre.Editor.Field
         {
             this.pictureBox.Image = null;
             if (City == null) return;
-            string path = MainForm.ResourcesPath + Constants.DIR_IMAGES_MAPS + City.map;
+            string path = ObjectEditor.Editor.MainForm.ResourcesPath + Constants.DIR_IMAGES_MAPS + City.map;
             if (!File.Exists(path)) return;
             try
             {

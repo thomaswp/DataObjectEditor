@@ -2,7 +2,7 @@ namespace Emigre.Data
 {
 
     using System.Collections.Generic;
-    using Emigre.Json;
+    using ObjectEditor.Json;
 
     public class Scenario : GameData, IHasEvents, IEnableable, IScriptable
     {

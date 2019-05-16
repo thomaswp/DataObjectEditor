@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
     using System;
-    using Json;
+    using ObjectEditor.Json;
 
     [Category("Text")]
     public class TextEvent : SpeakingEvent, ICustomScriptable

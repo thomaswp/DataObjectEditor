@@ -1,4 +1,4 @@
-﻿namespace Emigre.Editor
+﻿namespace ObjectEditor.Editor
 {
     partial class MainForm
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Emigre.Editor.EditorIndex editorIndex1 = new Emigre.Editor.EditorIndex();
+            ObjectEditor.Editor.EditorIndex editorIndex1 = new ObjectEditor.Editor.EditorIndex();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -49,8 +49,8 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel = new Emigre.Editor.PanelNoScrollOnFocus();
-            this.objectEditor = new Emigre.Editor.DataObjectEditor();
+            this.panel = new ObjectEditor.Editor.PanelNoScrollOnFocus();
+            this.objectEditor = new ObjectEditor.Editor.DataObjectEditor();
             this.openFileDialogMD = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogMD = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTxt = new System.Windows.Forms.OpenFileDialog();

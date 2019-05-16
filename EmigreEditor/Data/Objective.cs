@@ -1,4 +1,4 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 
 namespace Emigre.Data
 {
@@ -13,7 +13,7 @@ namespace Emigre.Data
         [FieldTag(FieldTags.Multiline)]
         public string description;
 
-        public override void AddFields(Json.FieldData fields)
+        public override void AddFields(FieldData fields)
         {
             base.AddFields(fields);
             name = fields.add(name, "name");

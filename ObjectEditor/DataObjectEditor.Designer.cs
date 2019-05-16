@@ -1,4 +1,4 @@
-﻿namespace Emigre.Editor
+﻿namespace ObjectEditor.Editor
 {
     partial class DataObjectEditor
     {
@@ -34,7 +34,7 @@
             this.tableLayoutPanelObject = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelList = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxList = new System.Windows.Forms.ComboBox();
-            this.listBoxList = new Emigre.Editor.DataObjectEditor.NoScrollListBox(this);
+            this.listBoxList = new ObjectEditor.Editor.DataObjectEditor.NoScrollListBox(this);
             this.contextMenuStripList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

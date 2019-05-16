@@ -1,12 +1,12 @@
 ﻿
-using Emigre.Editor.Reflect;
-using Emigre.Json;
+using ObjectEditor.Editor.Reflect;
+using ObjectEditor.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Emigre.Editor.Script
+namespace ObjectEditor.Editor.Script
 {
     public static class ScriptWriter
     {

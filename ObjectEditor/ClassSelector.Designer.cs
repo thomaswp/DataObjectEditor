@@ -1,4 +1,4 @@
-﻿namespace Emigre.Editor
+﻿namespace ObjectEditor.Editor
 {
     partial class ClassSelector
     {

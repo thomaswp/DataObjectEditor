@@ -1,11 +1,11 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Emigre.Editor
+namespace ObjectEditor.Editor
 {
     public partial class ClassSelector : Form
     {

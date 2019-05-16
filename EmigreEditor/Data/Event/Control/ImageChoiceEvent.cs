@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
 
-    using Json;
+    using ObjectEditor.Json;
 
     [Category("Control")]
     public class ImageChoiceEvent : ChoiceEvent<ImageChoiceEvent.ImageChoice>

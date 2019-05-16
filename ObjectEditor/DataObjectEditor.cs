@@ -5,14 +5,14 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Emigre.Editor.Reflect;
-using Emigre.Editor.Field;
+using ObjectEditor.Editor.Reflect;
+using ObjectEditor.Editor.Field;
 using System.Collections;
-using Emigre.Json;
+using ObjectEditor.Json;
 using System.Runtime.InteropServices;
 using System.IO;
 
-namespace Emigre.Editor
+namespace ObjectEditor.Editor
 {
     public class SafeNamer
     {
@@ -240,7 +240,7 @@ namespace Emigre.Editor
                 if (list != null)
                 {
                     Type listOf = GetFirstGenericType(list);
-                    if (!typeof(Emigre.Json.DataObject).IsAssignableFrom(listOf)) continue;
+                    if (!typeof(ObjectEditor.Json.DataObject).IsAssignableFrom(listOf)) continue;
 
                     comboBoxList.Items.Add(listPrefix + GetHumanReadableField(accessor.GetName()));
                     lists.Add(list);
@@ -541,7 +541,7 @@ namespace Emigre.Editor
                 this.buttonDown.Enabled = false;
             }
 
-            Emigre.Json.DataObject obj = CurrentItem;
+            ObjectEditor.Json.DataObject obj = CurrentItem;
             if (nextEditor == null)
             {
                 nextEditor = new DataObjectEditor(this);
@@ -626,7 +626,7 @@ namespace Emigre.Editor
             DeleteItems(toRemove, true);
         }
 
-        private void AddItem(Emigre.Json.DataObject obj, int index, bool select, bool report = true)
+        private void AddItem(ObjectEditor.Json.DataObject obj, int index, bool select, bool report = true)
         {
             List<Json.DataObject> objs = new List<Json.DataObject>();
             objs.Add(obj);
@@ -727,7 +727,7 @@ namespace Emigre.Editor
 
         private void UpdateSelectedItemText()
         {
-            Emigre.Json.DataObject obj = CurrentItem;
+            ObjectEditor.Json.DataObject obj = CurrentItem;
             if (obj == null) return;
             int index = listBoxList.SelectedIndex;
             string name = SafeName(obj);
@@ -801,7 +801,7 @@ namespace Emigre.Editor
                     if (!File.Exists(file)) return;
                     string content = File.ReadAllText(file);
                     IWritableContext context = CreateRootContext();
-                    var obj = Emigre.Json.JsonSerializer.fromJson(content, true, context);
+                    var obj = ObjectEditor.Json.JsonSerializer.fromJson(content, true, context);
 
                     DataObjectList objs = obj as DataObjectList;
                     if (objs == null)

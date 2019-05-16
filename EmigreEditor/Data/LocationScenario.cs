@@ -1,4 +1,4 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 
 namespace Emigre.Data
 {
@@ -20,7 +20,7 @@ namespace Emigre.Data
             }
         }
 
-        public override void AddFields(Json.FieldData fields)
+        public override void AddFields(FieldData fields)
         {
             base.AddFields(fields);
             autostart = fields.add(autostart, "autostart");

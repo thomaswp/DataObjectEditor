@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Emigre.Editor.Reflect;
+using ObjectEditor.Editor.Reflect;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace Emigre.Editor.Field
+namespace ObjectEditor.Editor.Field
 {
     public class StringEditor : FieldEditor<string>
     {
@@ -15,7 +15,7 @@ namespace Emigre.Editor.Field
         {
             textbox = new NoScrollTextbox();
             textbox.Width = 350;
-            if (accessor.GetTags().Any((tag) => tag.flag == Emigre.Json.FieldTags.Multiline))
+            if (accessor.GetTags().Any((tag) => tag.flag == ObjectEditor.Json.FieldTags.Multiline))
             {
                 textbox.Multiline = true;
                 textbox.ScrollBars = ScrollBars.Vertical;

@@ -3,8 +3,10 @@ using System.Windows.Forms;
 using Emigre.Data;
 using Emigre.Editor.Field;
 using System.Collections.Generic;
-using Emigre.Editor.Reflect;
+using ObjectEditor.Editor.Reflect;
 using System.Collections;
+using ObjectEditor.Editor.Field;
+using ObjectEditor.Editor;
 
 namespace Emigre.Editor
 {
@@ -45,7 +47,7 @@ namespace Emigre.Editor
                     List<StoryEvent> events = (obj as IHasEvents).GetEvents();
                     name += AddNameChildren(events);
                 }
-                else if (obj is Json.DataObject)
+                else if (obj is ObjectEditor.Json.DataObject)
                 {
                     var accessors = FieldAccessor.GetForObject(obj);
                     foreach (Accessor accessor in accessors)

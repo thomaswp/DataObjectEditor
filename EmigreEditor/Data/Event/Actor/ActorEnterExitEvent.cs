@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
 
-    using Json;
+    using ObjectEditor.Json;
 
     [Category("Actor")]
     public class ActorEnterExitEvent : StoryEvent

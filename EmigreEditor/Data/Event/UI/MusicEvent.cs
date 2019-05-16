@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
 
-    using Json;
+    using ObjectEditor.Json;
 
     [Category("UI")]
     public class MusicEvent : StoryEvent

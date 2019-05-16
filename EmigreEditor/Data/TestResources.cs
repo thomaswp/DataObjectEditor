@@ -1,4 +1,4 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 
 namespace Emigre.Data
 {
@@ -16,7 +16,7 @@ namespace Emigre.Data
         public readonly Reference<Item> item4 = new Reference<Item>();
         public readonly Reference<Item> item5 = new Reference<Item>();
 
-        public override void AddFields(Json.FieldData fields)
+        public override void AddFields(FieldData fields)
         {
             base.AddFields(fields);
             day = fields.add(day, "day");

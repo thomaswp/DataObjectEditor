@@ -1,4 +1,4 @@
-﻿namespace Emigre.Editor.Script
+﻿namespace ObjectEditor.Editor.Script
 {
     partial class DiffForm
     {

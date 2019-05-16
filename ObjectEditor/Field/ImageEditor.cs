@@ -1,12 +1,12 @@
-﻿using Emigre.Editor.Reflect;
-using Emigre.Json;
+﻿using ObjectEditor.Editor.Reflect;
+using ObjectEditor.Json;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Emigre.Editor.Field
+namespace ObjectEditor.Editor.Field
 {
     public class ImageEditor : FieldEditor<string>
     {

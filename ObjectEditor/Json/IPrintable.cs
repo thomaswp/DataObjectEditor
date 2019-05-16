@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Emigre.Json
+namespace ObjectEditor.Json
 {
     public interface IPrintable
     {

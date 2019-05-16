@@ -1,8 +1,8 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 using System;
 using System.Collections.Generic;
 
-namespace Emigre.Editor
+namespace ObjectEditor.Editor
 {
     public abstract class EditAction : EventArgs
     {

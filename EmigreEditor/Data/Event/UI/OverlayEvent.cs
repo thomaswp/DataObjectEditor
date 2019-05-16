@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
 
-    using Emigre.Json;
+    using ObjectEditor.Json;
 
     [Category("UI")]
     public class OverlayEvent : AbstractOverlayEvent

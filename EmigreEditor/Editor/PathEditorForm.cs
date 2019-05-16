@@ -43,7 +43,7 @@ namespace Emigre.Editor.Field
             selectedIndex = -1;
             mouseDown = false;
             pictureBox.MinimumSize = new System.Drawing.Size(0, 0);
-            string path = MainForm.ResourcesPath + Constants.DIR_IMAGES_MAPS + Path.map;
+            string path = ObjectEditor.Editor.MainForm.ResourcesPath + Constants.DIR_IMAGES_MAPS + Path.map;
             try
             {
                 if (File.Exists(path))
@@ -89,7 +89,7 @@ namespace Emigre.Editor.Field
 
         private void ChooseMap()
         {
-            openFileDialog.InitialDirectory = MainForm.ResourcesPath + Constants.DIR_IMAGES_MAPS.Replace("/", "\\");
+            openFileDialog.InitialDirectory = ObjectEditor.Editor.MainForm.ResourcesPath + Constants.DIR_IMAGES_MAPS.Replace("/", "\\");
             if (Path.map != null) openFileDialog.FileName = Path.map;
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {

@@ -2,7 +2,7 @@ namespace Emigre.Data
 {
     using System.Linq;
     using System.Collections.Generic;
-    using Json;
+    using ObjectEditor.Json;
     
     public abstract class ChoiceEvent : StoryEvent, ISearchable, IScriptable
     {

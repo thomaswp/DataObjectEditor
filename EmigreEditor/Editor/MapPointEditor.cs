@@ -1,5 +1,7 @@
 ﻿using Emigre.Data;
-using Emigre.Editor.Reflect;
+using ObjectEditor.Editor;
+using ObjectEditor.Editor.Field;
+using ObjectEditor.Editor.Reflect;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -27,7 +29,7 @@ namespace Emigre.Editor.Field
                 city => city.locations.Contains(lookup.DataObject)).FirstOrDefault();
             editor.City = parent;
 
-            editor.Point = Json.JsonSerializer.copy(GetValue());
+            editor.Point = ObjectEditor.Json.JsonSerializer.copy(GetValue());
             editor.StartPosition = FormStartPosition.CenterParent;
             if (editor.ShowDialog() == DialogResult.OK)
             {

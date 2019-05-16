@@ -1,5 +1,7 @@
 ﻿using Emigre.Data;
-using Emigre.Editor.Reflect;
+using ObjectEditor.Editor;
+using ObjectEditor.Editor.Field;
+using ObjectEditor.Editor.Reflect;
 using System;
 using System.Drawing;
 using System.IO;
@@ -30,7 +32,7 @@ namespace Emigre.Editor.Field
 
         void box_Click(object sender, EventArgs e)
         {
-            editor.Path = Json.JsonSerializer.copy(GetValue());
+            editor.Path = ObjectEditor.Json.JsonSerializer.copy(GetValue());
             editor.StartPosition = FormStartPosition.CenterParent;
             if (editor.ShowDialog() == DialogResult.OK)
             {

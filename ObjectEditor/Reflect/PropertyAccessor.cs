@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Emigre.Json;
+using ObjectEditor.Json;
 
-namespace Emigre.Editor.Reflect
+namespace ObjectEditor.Editor.Reflect
 {
     public class PropertyAccessor : Accessor
     {

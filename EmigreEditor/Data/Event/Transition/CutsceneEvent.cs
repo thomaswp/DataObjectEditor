@@ -1,4 +1,4 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 
 namespace Emigre.Data
 {
@@ -8,7 +8,7 @@ namespace Emigre.Data
         [FieldTag(FieldTags.File, Constants.DIR_VIDEO)]
         public string video;
 
-        public override void AddFields(Json.FieldData fields)
+        public override void AddFields(FieldData fields)
         {
             base.AddFields(fields);
             video = fields.add(video, "video");

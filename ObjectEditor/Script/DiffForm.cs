@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Emigre.Editor.Script
+namespace ObjectEditor.Editor.Script
 {
     public partial class DiffForm : Form
     {

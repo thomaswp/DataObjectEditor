@@ -1,6 +1,6 @@
 namespace Emigre.Data
 {
-    using Emigre.Json;
+    using ObjectEditor.Json;
 
     public abstract class SpeakingEvent : StoryEvent
     {

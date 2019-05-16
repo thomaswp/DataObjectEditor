@@ -1,7 +1,7 @@
-﻿using Emigre.Editor.Reflect;
+﻿using ObjectEditor.Editor.Reflect;
 using System.Windows.Forms;
 
-namespace Emigre.Editor.Field
+namespace ObjectEditor.Editor.Field
 {
     public class BoolEditor : FieldEditor<bool>
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
-using Emigre.Json;
+using ObjectEditor.Json;
 using System.Linq;
 
-namespace Emigre.Editor
+namespace ObjectEditor.Editor
 {
     public partial class MainForm : Form
     {

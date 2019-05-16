@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace Emigre.Editor
+namespace ObjectEditor.Editor
 {
 
     /// <summary>

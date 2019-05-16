@@ -1,9 +1,9 @@
 ﻿using System;
-using Emigre.Editor.Reflect;
+using ObjectEditor.Editor.Reflect;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace Emigre.Editor.Field
+namespace ObjectEditor.Editor.Field
 {
     public class IntEditor : FieldEditor<int>
     {

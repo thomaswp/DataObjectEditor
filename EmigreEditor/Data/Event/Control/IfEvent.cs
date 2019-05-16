@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
     using System.Collections.Generic;
-    using Json;
+    using ObjectEditor.Json;
 
     [Category("Control")]
     public class IfEvent : StoryEvent, IScriptable

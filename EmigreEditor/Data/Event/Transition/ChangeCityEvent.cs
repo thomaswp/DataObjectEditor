@@ -1,7 +1,7 @@
 namespace Emigre.Data
 {
 
-    using Json;
+    using ObjectEditor.Json;
 
     [Category("Transition")]
     public class ChangeCityEvent : StoryEvent

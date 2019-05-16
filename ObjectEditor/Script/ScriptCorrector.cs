@@ -1,10 +1,10 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Emigre.Editor.Script
+namespace ObjectEditor.Editor.Script
 {
     public static class ScriptCorrector
     {

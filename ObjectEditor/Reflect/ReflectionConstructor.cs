@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Emigre.Json
+namespace ObjectEditor.Json
 {
     [Category("Text", "Control")]
     public class ReflectionConstructor<T> : Constructor where T : DataObject

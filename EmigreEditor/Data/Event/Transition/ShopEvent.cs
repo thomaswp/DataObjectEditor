@@ -1,4 +1,4 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +26,7 @@ namespace Emigre.Data
             ReflectionConstructor<Trade>.Register("Trade");
         }
 
-        public override void AddFields(Json.FieldData fields)
+        public override void AddFields(ObjectEditor.Json.FieldData fields)
         {
             base.AddFields(fields);
             fields.addReference(buyer, "buyer");

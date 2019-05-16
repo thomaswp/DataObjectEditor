@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Emigre.Editor
+namespace ObjectEditor.Editor
 {
     static class Program
     {

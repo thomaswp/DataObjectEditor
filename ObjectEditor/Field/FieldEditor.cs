@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Emigre.Editor.Reflect;
+using ObjectEditor.Editor.Reflect;
 using System.Windows.Forms;
-using Emigre.Json;
+using ObjectEditor.Json;
 
-namespace Emigre.Editor.Field
+namespace ObjectEditor.Editor.Field
 {
     public abstract class FieldEditor
     {

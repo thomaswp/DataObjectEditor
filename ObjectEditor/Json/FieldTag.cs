@@ -1,4 +1,4 @@
-﻿namespace Emigre.Json
+﻿namespace ObjectEditor.Json
 {
     public enum FieldTags
     {

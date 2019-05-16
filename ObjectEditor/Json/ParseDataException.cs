@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Emigre.Json
+namespace ObjectEditor.Json
 {
     public class ParseDataException : Exception
     {

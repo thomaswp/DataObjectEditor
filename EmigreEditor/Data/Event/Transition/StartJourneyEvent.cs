@@ -1,4 +1,4 @@
-﻿using Emigre.Json;
+﻿using ObjectEditor.Json;
 
 namespace Emigre.Data
 {
@@ -8,7 +8,7 @@ namespace Emigre.Data
 
         public readonly Reference<Journey> journey = new Reference<Journey>();
 
-        public override void AddFields(Json.FieldData fields)
+        public override void AddFields(FieldData fields)
         {
             base.AddFields(fields);
             fields.addReference(journey, "journey");
