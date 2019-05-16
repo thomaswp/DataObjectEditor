@@ -25,10 +25,12 @@ namespace ObjectEditor.Editor.Field
             box.BorderStyle = BorderStyle.FixedSingle;
             box.MouseClick += Box_MouseClick;
             folder = accessor.GetTags().Where((tag) => tag.flag == FieldTags.Image).First().arg;
+            if (!(folder.EndsWith("/") | folder.EndsWith("\\"))) folder += "\\";
+            folder = folder.Replace("/","\\");
 
             openDialog = new OpenFileDialog();
             openDialog.FileName = path;
-            openDialog.InitialDirectory = MainForm.ResourcesPath + folder.Replace("/","\\");
+            openDialog.InitialDirectory = MainForm.ResourcesPath;
             openDialog.Filter = "Image Files | *.bmp; *.png; *.jpg; *.jpeg | All Files | *.*";
 
             SetUIValue(GetValue());

@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="Data\Game.cs" />
     <Compile Include="Data\GameData.cs" />
+    <Compile Include="Data\Building.cs" />
+    <Compile Include="Data\Resource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
