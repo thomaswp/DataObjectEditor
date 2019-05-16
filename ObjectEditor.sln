@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObjectEditor", "ObjectE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmigreEditor", "EmigreEditor\EmigreEditor.csproj", "{DB36B07A-4E2C-4028-B309-4A42965831C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HearthEditor", "HearthEditor\HearthEditor.csproj", "{A5F666C3-43D0-42D8-9645-F79C020672AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DB36B07A-4E2C-4028-B309-4A42965831C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB36B07A-4E2C-4028-B309-4A42965831C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB36B07A-4E2C-4028-B309-4A42965831C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F666C3-43D0-42D8-9645-F79C020672AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F666C3-43D0-42D8-9645-F79C020672AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F666C3-43D0-42D8-9645-F79C020672AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F666C3-43D0-42D8-9645-F79C020672AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
