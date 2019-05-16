@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB36B07A-4E2C-4028-B309-4A42965831C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EmigreEditor</RootNamespace>
+    <AssemblyName>EmigreEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Actor.cs" />
+    <Compile Include="Data\Alignment.cs" />
+    <Compile Include="Data\Character.cs" />
+    <Compile Include="Data\City.cs" />
+    <Compile Include="Data\Clue.cs" />
+    <Compile Include="Data\Condition.cs" />
+    <Compile Include="Data\ConditionOutcome.cs" />
+    <Compile Include="Data\Constants.cs" />
+    <Compile Include="Data\Event\Actor\ActorEnterExitEvent.cs" />
+    <Compile Include="Data\Event\Actor\SpeakingEvent.cs" />
+    <Compile Include="Data\Event\Control\CheckPagesEvent.cs" />
+    <Compile Include="Data\Event\Control\ChoiceEvent.cs" />
+    <Compile Include="Data\Event\Control\EnableChoiceEvent.cs" />
+    <Compile Include="Data\Event\Control\EnablePageEvent.cs" />
+    <Compile Include="Data\Event\Control\EnableScenarioEvent.cs" />
+    <Compile Include="Data\Event\Control\EndGameEvent.cs" />
+    <Compile Include="Data\Event\Control\EndScenarioEvent.cs" />
+    <Compile Include="Data\Event\Control\IfEvent.cs" />
+    <Compile Include="Data\Event\Control\ImageChoiceEvent.cs" />
+    <Compile Include="Data\Event\Control\WaitEvent.cs" />
+    <Compile Include="Data\Event\Data\AlignmentEvent.cs" />
+    <Compile Include="Data\Event\Data\ChangeStatusEvent.cs" />
+    <Compile Include="Data\Event\Data\FindClueEvent.cs" />
+    <Compile Include="Data\Event\Data\ItemEvent.cs" />
+    <Compile Include="Data\Event\Data\ResourceEvent.cs" />
+    <Compile Include="Data\Event\Data\SetLodgingEvent.cs" />
+    <Compile Include="Data\Event\Data\SetVariableEvent.cs" />
+    <Compile Include="Data\Event\Data\SkillLevelUpEvent.cs" />
+    <Compile Include="Data\Event\IHasEvents.cs" />
+    <Compile Include="Data\Event\Sprite\ChangeSpriteEvent.cs" />
+    <Compile Include="Data\Event\Sprite\FadeSpriteEvent.cs" />
+    <Compile Include="Data\Event\Sprite\ScreenEvent.cs" />
+    <Compile Include="Data\Event\Sprite\TransitionTriggerEvent.cs" />
+    <Compile Include="Data\Event\StoryEvent.cs" />
+    <Compile Include="Data\Event\Subway\PhoneEvent.cs" />
+    <Compile Include="Data\Event\Subway\ShowBookEvent.cs" />
+    <Compile Include="Data\Event\Subway\ShowTitleEvent.cs" />
+    <Compile Include="Data\Event\Text\TextChoiceEvent.cs" />
+    <Compile Include="Data\Event\Text\TextEvent.cs" />
+    <Compile Include="Data\Event\Transition\BackgroundEvent.cs" />
+    <Compile Include="Data\Event\Transition\ChangeCityEvent.cs" />
+    <Compile Include="Data\Event\Transition\ChangeLocationEvent.cs" />
+    <Compile Include="Data\Event\Transition\CutsceneEvent.cs" />
+    <Compile Include="Data\Event\Transition\DiscoverLocationEvent.cs" />
+    <Compile Include="Data\Event\Transition\LoadSceneEvent.cs" />
+    <Compile Include="Data\Event\Transition\MinigameEvent.cs" />
+    <Compile Include="Data\Event\Transition\ShopEvent.cs" />
+    <Compile Include="Data\Event\Transition\SleepEvent.cs" />
+    <Compile Include="Data\Event\Transition\StartJourneyEvent.cs" />
+    <Compile Include="Data\Event\UI\AbstractOverlayEvent.cs" />
+    <Compile Include="Data\Event\UI\MusicEvent.cs" />
+    <Compile Include="Data\Event\UI\ObjectiveEvent.cs" />
+    <Compile Include="Data\Event\UI\OverlayEvent.cs" />
+    <Compile Include="Data\GameData.cs" />
+    <Compile Include="Data\GameValue.cs" />
+    <Compile Include="Data\GlobalEvent.cs" />
+    <Compile Include="Data\History.cs" />
+    <Compile Include="Data\IEnableable.cs" />
+    <Compile Include="Data\IHasPortrait.cs" />
+    <Compile Include="Data\IHasStatus.cs" />
+    <Compile Include="Data\Item.cs" />
+    <Compile Include="Data\Journey.cs" />
+    <Compile Include="Data\JourneyScenario.cs" />
+    <Compile Include="Data\Location.cs" />
+    <Compile Include="Data\LocationScenario.cs" />
+    <Compile Include="Data\Objective.cs" />
+    <Compile Include="Data\Outcome.cs" />
+    <Compile Include="Data\Page.cs" />
+    <Compile Include="Data\Point2D.cs" />
+    <Compile Include="Data\ReflectionConstructor.cs" />
+    <Compile Include="Data\Scenario.cs" />
+    <Compile Include="Data\Skill.cs" />
+    <Compile Include="Data\Story.cs" />
+    <Compile Include="Data\TestResources.cs" />
+    <Compile Include="Data\Variable.cs" />
+    <Compile Include="Editor\MapPointEditor.cs" />
+    <Compile Include="Editor\MapPointEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\MapPointEditorForm.Designer.cs">
+      <DependentUpon>MapPointEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\PathEditor.cs" />
+    <Compile Include="Editor\PathEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\PathEditorForm.Designer.cs">
+      <DependentUpon>PathEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Editor\MapPointEditorForm.resx">
+      <DependentUpon>MapPointEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\PathEditorForm.resx">
+      <DependentUpon>PathEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectEditor\DataObjectEditor.csproj">
+      <Project>{27612836-da8d-489e-a725-c6876d22a7a1}</Project>
+      <Name>DataObjectEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

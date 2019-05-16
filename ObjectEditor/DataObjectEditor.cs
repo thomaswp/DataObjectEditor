@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Emigre.Data;
 using Emigre.Editor.Reflect;
 using Emigre.Editor.Field;
 using System.Collections;
@@ -15,6 +14,36 @@ using System.IO;
 
 namespace Emigre.Editor
 {
+    public class SafeNamer
+    {
+        public virtual String GetSafeName(object obj, Boolean hasChildren)
+        {
+            string name = obj.ToString();
+            if (name == null) name = "<null>";
+            name = name.Replace("\n", "");
+            return name;
+        }
+
+        protected virtual string AddNameChildren(IList list)
+        {
+            string name = "";
+            string prefex = "\n >> ";
+            if (list.Count > 0) name += ":";
+            int max = 3;
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (i == max)
+                {
+                    name += prefex + "...";
+                    break;
+                }
+                string s = GetSafeName(list[i], false);
+                name += prefex + s;
+            }
+            return name;
+        }
+    }
+
     public partial class DataObjectEditor : UserControl, Lookup
     {
 
@@ -131,9 +160,12 @@ namespace Emigre.Editor
         private ClassSelector classSelector;
         private List<FieldEditor> editors = new List<FieldEditor>();
 
+        public static SafeNamer SafeNamer { get; set; }
+
         static DataObjectEditor()
         {
             AutoCollapse = true;
+            SafeNamer = new SafeNamer();
         }
 
         public DataObjectEditor() : this(null) { }
@@ -874,6 +906,11 @@ namespace Emigre.Editor
 
         #region Helper Methods
 
+        public string SafeName(object obj, bool hasChildren=false)
+        {
+            return SafeNamer.GetSafeName(obj, hasChildren);   
+        }
+
         public static Type GetFirstGenericType(object obj)
         {
             if (obj == null) return null;
@@ -887,60 +924,7 @@ namespace Emigre.Editor
             return args[0];
         }
 
-        private static string SafeName(object obj, bool children = true)
-        {
-            string name = obj.ToString();
-            if (name == null) name = "<null>";
-            name = name.Replace("\n", "");
-            if (children)
-            {
-                if (obj is IHasEvents)
-                {
-                    List<StoryEvent> events = (obj as IHasEvents).GetEvents();
-                    name += AddNameChildren(events);
-                }
-                else if (obj is Json.DataObject)
-                {
-                    var accessors = FieldAccessor.GetForObject(obj);
-                    foreach (Accessor accessor in accessors)
-                    {
-                        Type type = accessor.GetAccessorType();
-                        if (IsGenericList(type))
-                        {
-                            IList list = (IList)accessor.Get();
-                            if (list == null) continue;
-                            Type listOf = GetFirstGenericType(list);
-                            if (typeof(Outcome).IsAssignableFrom(listOf))
-                            {
-                                name += AddNameChildren(list);
-                            }
-                        }
-                    }
-                }
-            }
-            return name;
-        }
-
-        private static string AddNameChildren(IList list)
-        {
-            string name = "";
-            string prefex = "\n >> ";
-            if (list.Count > 0) name += ":";
-            int max = 3;
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (i == max)
-                {
-                    name += prefex + "...";
-                    break;
-                }
-                string s = SafeName(list[i], false);
-                name += prefex + s;
-            }
-            return name;
-        }
-
-        private static bool IsGenericList(Type t)
+        public static bool IsGenericList(Type t)
         {
             if (t == null) return false;
             return t.IsGenericType &&

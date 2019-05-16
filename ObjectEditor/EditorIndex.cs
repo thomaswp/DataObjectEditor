@@ -1,5 +1,4 @@
-﻿using Emigre.Data;
-using Emigre.Json;
+﻿using Emigre.Json;
 
 namespace Emigre.Editor
 {

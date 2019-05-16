@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
-using Emigre.Data;
 using Emigre.Json;
 using System.Linq;
 
@@ -48,7 +47,6 @@ namespace Emigre.Editor
         public MainForm()
         {
             InitializeComponent();
-            Story.Load();
             EditorIndex.Load();
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint, true);

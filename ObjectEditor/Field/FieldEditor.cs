@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Emigre.Editor.Reflect;
 using System.Windows.Forms;
-using Emigre.Data;
 using Emigre.Json;
 
 namespace Emigre.Editor.Field
@@ -41,13 +40,16 @@ namespace Emigre.Editor.Field
 
         static FieldEditor()
         {
-            fieldEditors.Add(typeof(string), (a, l) => new StringEditor(a));
-            fieldEditors.Add(typeof(int), (a, l) => new IntEditor(a));
-            fieldEditors.Add(typeof(float), (a, l) => new FloatEditor(a));
-            fieldEditors.Add(typeof(bool), (a, l) => new BoolEditor(a));
-            fieldEditors.Add(typeof(JourneyPath), (a, l) => new PathEditor(a));
-            fieldEditors.Add(typeof(Location.MapPoint), (a, l) => new MapPointEditor(a, l));
-            fieldEditors.Add(typeof(Guid), (a, l) => null);
+            RegisterEditor(typeof(string), (a, l) => new StringEditor(a));
+            RegisterEditor(typeof(int), (a, l) => new IntEditor(a));
+            RegisterEditor(typeof(float), (a, l) => new FloatEditor(a));
+            RegisterEditor(typeof(bool), (a, l) => new BoolEditor(a));
+            RegisterEditor(typeof(Guid), (a, l) => null);
+        }
+
+        public static void RegisterEditor(Type type, Func<Accessor, DataObjectEditor, FieldEditor> editAction)
+        {
+            fieldEditors.Add(type, editAction);
         }
 
         protected virtual void SetValueImpl(object value)
