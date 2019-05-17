@@ -1,4 +1,5 @@
 ﻿using ObjectEditor.Json;
+using ObjectEditor.Editor.Reflect;
 using System;
 using System.Linq;
 
@@ -8,8 +9,7 @@ namespace HearthEditor.Data
     {
         public Guid Guid
         {
-            get;
-            private set;
+            get; set;
         }
 
         Guid GuidDataObject.GetGuid()
@@ -24,7 +24,7 @@ namespace HearthEditor.Data
 
         public virtual void AddFields(FieldData fields)
         {
-            Guid = fields.addGuid(Guid, "Guid");
+            ReflectionFieldAdder.addFields(this, fields);
         }
         
         public static void Register<T>(string key = null) where T : GameData
@@ -41,7 +41,7 @@ namespace HearthEditor.Data
             foreach (Type type in allTypes)
             {
                 new NoArgsTypeConstructor(type).Register(type);
-                Console.WriteLine(type.Name);
+                //Console.WriteLine(type.Name);
             }
         }
     }

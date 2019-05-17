@@ -88,6 +88,7 @@
     <Compile Include="Reflect\FieldAccessor.cs" />
     <Compile Include="Reflect\PropertyAccessor.cs" />
     <Compile Include="Reflect\ReflectionConstructor.cs" />
+    <Compile Include="Reflect\ReflectionFieldAdder.cs" />
     <Compile Include="Script\DiffForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -10,14 +10,6 @@ namespace HearthEditor.Data
         [FieldTag(FieldTags.Image, "building")]
         public string sprite;
 
-        public override void AddFields(FieldData fields)
-        {
-            base.AddFields(fields);
-            name = fields.add(name, "name");
-            icon = fields.add(icon, "icon");
-            sprite = fields.add(sprite, "sprite");
-        }
-
         public override string ToString()
         {
             return name;
