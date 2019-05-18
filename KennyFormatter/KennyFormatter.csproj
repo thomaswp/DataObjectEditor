@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5F666C3-43D0-42D8-9645-F79C020672AF}</ProjectGuid>
+    <ProjectGuid>{D4257862-778C-466A-A5A5-325058CB310E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HearthEditor</RootNamespace>
-    <AssemblyName>HearthEditor</AssemblyName>
+    <RootNamespace>KennyFormatter</RootNamespace>
+    <AssemblyName>KennyFormatter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,13 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Game.cs" />
-    <Compile Include="Data\GameData.cs" />
-    <Compile Include="Data\Building.cs" />
-    <Compile Include="Data\ResourceSource.cs" />
-    <Compile Include="Data\Resource.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,12 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ObjectEditor\DataObjectEditor.csproj">
-      <Project>{27612836-da8d-489e-a725-c6876d22a7a1}</Project>
-      <Name>DataObjectEditor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

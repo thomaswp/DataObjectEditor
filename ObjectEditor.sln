@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmigreEditor", "EmigreEdito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HearthEditor", "HearthEditor\HearthEditor.csproj", "{A5F666C3-43D0-42D8-9645-F79C020672AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KennyFormatter", "KennyFormatter\KennyFormatter.csproj", "{D4257862-778C-466A-A5A5-325058CB310E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A5F666C3-43D0-42D8-9645-F79C020672AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F666C3-43D0-42D8-9645-F79C020672AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F666C3-43D0-42D8-9645-F79C020672AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4257862-778C-466A-A5A5-325058CB310E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4257862-778C-466A-A5A5-325058CB310E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4257862-778C-466A-A5A5-325058CB310E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4257862-778C-466A-A5A5-325058CB310E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
