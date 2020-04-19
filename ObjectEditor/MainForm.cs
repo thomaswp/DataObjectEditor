@@ -17,6 +17,7 @@ namespace ObjectEditor.Editor
         private string scriptablePath;
 
         public static string ResourcesPath { get; set; }
+        public static string ResourceGraphicsPrefix { get; set; }
 
         private List<EditAction> edits = new List<EditAction>();
         private int editIndex, savedEditIndex; // index of the *next* edit
@@ -42,6 +43,7 @@ namespace ObjectEditor.Editor
         {
             string rootPath = @"C:\Users\Thomas\Documents\Unity\Emigre\"; // Directory.GetParent(Application.StartupPath).Parent.Parent.FullName;
             ResourcesPath = rootPath + @"\Assets\Resources\";
+            ResourceGraphicsPrefix = "";
         }
 
         public MainForm()

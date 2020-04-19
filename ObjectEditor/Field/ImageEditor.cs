@@ -30,7 +30,7 @@ namespace ObjectEditor.Editor.Field
 
             openDialog = new OpenFileDialog();
             openDialog.FileName = path;
-            openDialog.InitialDirectory = MainForm.ResourcesPath;
+            openDialog.InitialDirectory = MainForm.ResourcesPath + MainForm.ResourceGraphicsPrefix;
             openDialog.Filter = "Image Files | *.bmp; *.png; *.jpg; *.jpeg | All Files | *.*";
 
             SetUIValue(GetValue());
@@ -68,7 +68,8 @@ namespace ObjectEditor.Editor.Field
             if (value == this.path) return;
             this.path = value;
             box.Image = null;
-            string fullPath = MainForm.ResourcesPath + folder + value;
+            string fullPath = MainForm.ResourcesPath + MainForm.ResourceGraphicsPrefix + folder + value;
+            Console.WriteLine(fullPath);
             if (File.Exists(fullPath))
             {
                 try
