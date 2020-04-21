@@ -28,6 +28,10 @@ namespace ObjectEditor.Editor.Field
 
             reference = (Reference)accessor.Get();
             if (reference != null) reference.Context = context;
+            else
+            {
+                throw new Exception("Reference not initialized");
+            }
 
             SetUIValue(GetValue());
             comboBox.SelectedValueChanged += UpdateValue;
@@ -69,6 +73,7 @@ namespace ObjectEditor.Editor.Field
 
         protected override void SetValueImpl(object value)
         {
+            if (value == null) return;
             ((Reference)accessor.Get()).Guid = (Guid)value;
         }
 
